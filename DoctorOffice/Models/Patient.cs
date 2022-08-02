@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System;
+using System.Linq; 
+using System.Text;
 
 namespace DoctorOffice.Models
 {
@@ -18,10 +20,11 @@ namespace DoctorOffice.Models
 
         public virtual ICollection<DoctorPatient> JoinEntities { get;}
 
-        // public static void OrderByDate()
-        // {
-        //     IEnumerable<Item> orderedItems = items.OrderBy(item => item.DueDate);
-        // }
-
+        public string Date() 
+        {
+            return this.BirthDate.ToString("yyyy-MM-dd");
+        }
     }
+
+
 }

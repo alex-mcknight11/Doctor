@@ -17,7 +17,7 @@
   <li>@Html.ActionLink($"{patient.Name}", "Details", new { id = patient.PatientId })
     
   </li>
-  <p>BirthDate:@patient.BirthDate</p>
+  <p>Birthday:@patient.Date()</p>
 }
 
 <p>@Html.ActionLink("Add new patient", "Create")</p>
